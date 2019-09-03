@@ -8,7 +8,7 @@ install_requires = [
 'matplotlib',
 'scipy',
 'scikit-image',
-'sklearn',
+'scikit-learn',
 'xlrd',
 'xlsxwriter',
 'csv',
