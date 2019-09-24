@@ -1,5 +1,4 @@
-# MAT
-### Macrophage Anlaysis Toolkit
+# Macrophage Anlaysis Toolkit (MAT)
 
 ## Setup
 1. Python 3 will need to be installed prior to seting up MAT. Python 3 can be 
