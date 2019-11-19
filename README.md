@@ -20,7 +20,7 @@
     numpy, PyQt5, pillow.
     ![](./images/command_prompt_install.png)
 4. To run MAT either open the command prompt/powershell as directed in (3) and
-   run `python 'Macrophage Analysis Toolkit.py'` or double-click on 
+   run `py 'Macrophage Analysis Toolkit.py'` or double-click on 
    *Macrophage Analysis Toolkit.py* from the file explorer.
 
 ### Mac/Linux
