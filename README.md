@@ -3,11 +3,10 @@
 ## Setup
 ### Windows
 1. Python 3.7 will need to be installed prior to seting up MAT. Python 3.7 can be 
-    downloaded from python.org, or installed via your package manager in linux. 
-    The x86-64 executable installer is reccommended, as the default install
-    configuration will set python to open .py files by double clicking. If it 
-    is installed correctly opening a cmd or powershell window  and typing py
-    should start a python prompt.
+    downloaded from python.org. The x86-64 executable installer is reccommended,
+    as the default install configuration will set python to open .py files by 
+    double clicking. If it is installed correctly opening a cmd or powershell window
+    and typing py should start a python prompt.
     ![](./images/command_prompt_py.png)
 2. From a terminal window navigate to the folder where MAT has been downloaded. 
     This can also be achieved by opening the MAT folder in File Explorer,
