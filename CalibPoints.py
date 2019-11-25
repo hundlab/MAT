@@ -10,8 +10,10 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.qt_compat import QtWidgets
 from matplotlib.backends.backend_qt5agg import (FigureCanvas, NavigationToolbar2QT as NavigationToolbar)
 from matplotlib.figure import Figure
+from matplotlib.backend_bases import MouseButton
 from PyQt5.QtWidgets import QWidget
 from PyQt5.QtCore import pyqtSignal
+from PyQt5.QtCore import Qt
 
 class CalibPoints(QtWidgets.QWidget):
     pointAdded = pyqtSignal(tuple, int, name='pointAdded')
@@ -34,6 +36,8 @@ class CalibPoints(QtWidgets.QWidget):
         self.navbar = NavigationToolbar(self.canvas, self)
         layout.addWidget(self.navbar)
         layout.addWidget(self.canvas)
+        self.canvas.setFocusPolicy(Qt.ClickFocus)
+        self.canvas.setFocus()
         self._ax = self.canvas.figure.subplots()
         self._ax.imshow(imarr)
         self._ax.set_title(self.title)
@@ -43,7 +47,7 @@ class CalibPoints(QtWidgets.QWidget):
         self._ax.figure.canvas.draw()
 
         def onclick(event):
-            if (event.dblclick == 1):
+            if (event.dblclick or (event.button == MouseButton.LEFT and event.key == 'shift')): 
                 if not self.center is None:
                     self.pointScatters[-1].remove()
                     del self.pointScatters[-1]
@@ -51,7 +55,7 @@ class CalibPoints(QtWidgets.QWidget):
                 scatter = self._ax.scatter(self.center[0], self.center[1], s = 3 , color = 'r')
                 self.pointScatters.append(scatter)
                 self._ax.figure.canvas.draw()
-            if (event.button == 3):
+            if (event.button == MouseButton.RIGHT):
                 if self.center is None:
                     return
                 self.perimeter  = np.array([event.xdata, event.ydata])

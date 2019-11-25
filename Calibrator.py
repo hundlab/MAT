@@ -97,7 +97,7 @@ class Calibrator(QtWidgets.QWidget):
 
         self.CalData.new(self.imarr)
         msg = QMessageBox()
-        msg.setText('To add calibration data: \n  1) double click to define center \n  2) right click to define radius \n  3) close when finished')
+        msg.setText('To add calibration data: \n  1) Double Left Click or Shirt + Left Click to define center \n  2) Right Click to define radius \n  3) Close when finished')
         msg.setIcon(QMessageBox.Information)
         msg.setWindowTitle('Help')
         msg.exec()
