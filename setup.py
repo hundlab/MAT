@@ -4,23 +4,26 @@
 import os
 from setuptools import setup
 
-install_requires = [
-'matplotlib',
-'scipy',
-'scikit-image',
-'scikit-learn',
-'xlrd',
-'xlsxwriter',
-'csv',
-'numpy',
-'PyQt5',
-'PIL']
 
-setup(name='Macrophage Analysis Toolkit',
-      version='1.0',
-      description='A tool to quantify macrophage presence',
-      author='Alexander Winkle',
-      author_email='Hund.1@osu.edu',
-      install_requires=install_requires
-      )
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+with open("requirements.txt", "r", encoding="utf-8") as fh: 
+     install_requires = fh.read().splitlines()
+
+
+setup(name='hundlab-MAT',
+    package_dir={'':'src'},
+    packages=['MAT'],
+    scripts=['src/MacrophageAnalysisToolkit.py'],
+    version='1.0',
+    description='Macrophage Analysis Toolkit: A tool to quantify macrophage presence',
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/hundlab/MAT",
+    author='Alexander Winkle',
+    author_email='hund.1@osu.edu',
+    install_requires=install_requires,
+    include_package_data=True,
+    )
 

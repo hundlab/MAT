@@ -10,10 +10,11 @@ import scipy.misc
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
-from SelWin import SelWin
 from matplotlib.backends.qt_compat import QtWidgets
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from PyQt5.QtWidgets import QWidget, QDialog, QPushButton, QVBoxLayout, QMessageBox, QDoubleSpinBox, QLabel, QFileDialog
+
+from .SelWin import SelWin
 
 class RegionSel(QtWidgets.QWidget):
     def __init__(self):

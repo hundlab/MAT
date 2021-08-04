@@ -10,16 +10,18 @@ import csv
 import xlrd
 import xlsxwriter
 import numpy as np
-from RegionSel import RegionSel
-from SelWin import SelWin
-from matplotlib.backends.qt_compat import QtCore, QtWidgets
-from PyQt5.QtWidgets import QAction, QMenu, QTabWidget, QWidget, QDesktopWidget, QFileDialog, QMessageBox
 from PyQt5.QtGui import QIcon
 from PIL import Image
-from Runner import Runner
-from BDD import FindNuclei, FindBrownDots, Colocalize
-from BDDPlotter import BDDPlotter
-from Calibrator import Calibrator
+from PyQt5.QtWidgets import QAction, QMenu, QTabWidget, QWidget, QDesktopWidget, QFileDialog, QMessageBox
+from matplotlib.backends.qt_compat import QtCore, QtWidgets
+
+from MAT.RegionSel import RegionSel
+from MAT.SelWin import SelWin
+from MAT.Runner import Runner
+from MAT.BDD import FindNuclei, FindBrownDots, Colocalize
+from MAT.BDDPlotter import BDDPlotter
+from MAT.Calibrator import Calibrator
+
 Image.MAX_IMAGE_PIXELS = 1e90
 
 class ApplicationWindow(QtWidgets.QMainWindow):

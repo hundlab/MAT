@@ -10,7 +10,7 @@ import numpy as np
 from matplotlib.backends.qt_compat import QtWidgets
 from PyQt5.QtWidgets import QWidget, QSpinBox, QDoubleSpinBox, QLabel, QMessageBox, QTreeWidget
 from PyQt5.QtCore import Qt
-from CalibPoints import CalibPoints
+from .CalibPoints import CalibPoints
 
 class Calibrator(QtWidgets.QWidget):
     def __init__(self, title):
