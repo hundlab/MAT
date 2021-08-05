@@ -4,6 +4,7 @@
 import os
 from setuptools import setup
 
+version = '1.0'
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
@@ -16,7 +17,7 @@ setup(name='hundlab-MAT',
     package_dir={'':'src'},
     packages=['MAT'],
     scripts=['src/MacrophageAnalysisToolkit.py'],
-    version='1.0',
+    version=version,
     description='Macrophage Analysis Toolkit: A tool to quantify macrophage presence',
     long_description=long_description,
     long_description_content_type="text/markdown",
